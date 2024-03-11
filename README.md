@@ -13,9 +13,9 @@ const NewsletterSchema = new Schema({
 }, { timestamps: true });
 ```
 The application accepts the following requests:
-`POST /newsletters` will receive an `interval` value + `user` object from the request body, and save the user in the DB.
-`GET /newsletters` will return all user emails, for active subscriptions, in pages.
-`GET /newsletters/:user_id` will return the newsletter document for the specified `user_id`.
-`PUT /newsletters/:user_id` will update the user interval to another value received from the request body.
-`DELETE /newsletters/:user_id` will set the user subscription status to `false`.
+* `POST /newsletters` will receive an `interval` value + `user` object from the request body, and save the user in the DB.
+* `GET /newsletters` will return all user emails, for active subscriptions, in pages.
+* `GET /newsletters/:user_id` will return the newsletter document for the specified `user_id`.
+* `PUT /newsletters/:user_id` will update the user interval to another value received from the request body.
+* `DELETE /newsletters/:user_id` will set the user subscription status to `false`.
 
