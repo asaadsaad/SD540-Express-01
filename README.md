@@ -16,7 +16,7 @@ The application accepts the following requests:
 * `POST /newsletters` will receive an object with an `interval` value + `user` object from the request body, and save the user in the DB.
 * Create a middleware and apply it to the previous `POST` route, use the [Class Validator](https://www.npmjs.com/package/class-validator) package, and check if the request body has valid properties and types. (Generate `tsconfig.json` file using the following command `npx tsc --init` and set `{ experimentalDecorators: true }`)
 * `GET /newsletters/?projection=email,fullname` will return all user emails, for active subscriptions, in pages.
-* `GET /newsletters/:user_id` will return the newsletter document for the specified `user_id`.
-* `PUT /newsletters/:user_id` will update the user interval to another value received from the request body.
-* `DELETE /newsletters/:user_id` will set the user subscription status to `false`.
+* `GET /newsletters/:newsletter_id` will return the newsletter document for the specified `newsletter_id`.
+* `PUT /newsletters/:newsletter_id/?change=interval` will update the user interval to another value received from the request body.
+* `DELETE /newsletters/:newsletter_id` will set the user subscription status to `false`.
 
